@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table>
+    <tr>
+        <th></th>
+        <th>Username</th>
+    </tr>
+@foreach (var u in Model.Users)
+{
+    <tr>
+        <td>
+            <img style="height:100px; width: 100px; border-radius: 50px" src="@Url.Page("Index", "FilePreview", new { id = @u.UserId })" />
+        </td>
+        <td>@u.Username</td>
+    </tr>
+}
+</table>
