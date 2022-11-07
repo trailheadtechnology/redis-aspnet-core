@@ -109,7 +109,7 @@ namespace redis_aspnet_core_example.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database=C:\USERS\JTOWER\ONEDRIVE\SPEAKING\REDIS-ASPNET-CORE\CODE\REDIS-ASPNET-CORE-EXAMPLE\APP_DATA\SAMPLEDB.MDF");
+                optionsBuilder.UseSqlServer(@"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\App_Data\SampleDB.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
             }
         }
 
