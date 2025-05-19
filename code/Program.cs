@@ -7,7 +7,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = "127.0.0.1:6379,allowAdmin=true";
-    options.InstanceName = "dev-redis";
+    options.InstanceName = "dev-redis:";
 });
 
 var app = builder.Build();
@@ -22,6 +22,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+
 
 app.MapRazorPages();
 

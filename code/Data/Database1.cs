@@ -109,7 +109,7 @@ namespace redis_aspnet_core_example.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\App_Data\SampleDB.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework");
+                optionsBuilder.UseSqlServer(@"Data Source=.; Initial Catalog=SampleDB; User ID=sa; Password=Password#123; MultipleActiveResultSets=True;");
             }
         }
 

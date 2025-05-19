@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace redis_aspnet_core_example.Helpers
 {
-    public static class CacheHelper
+    public static class StackExchangeRedisHelper
     {
         private const string REDIS_CONNECTION = "127.0.0.1:6379,allowAdmin=true";
         private static long _lastReconnectTicks = DateTimeOffset.MinValue.UtcTicks;
