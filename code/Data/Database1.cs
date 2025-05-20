@@ -109,7 +109,7 @@ namespace redis_aspnet_core_example.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=.; Initial Catalog=SampleDB; User ID=sa; Password=Password#123; MultipleActiveResultSets=True;");
+                optionsBuilder.UseSqlServer(@"Data Source=localhost,1433; Initial Catalog=SampleDB; User ID=sa; Password=Password#123; MultipleActiveResultSets=True; TrustServerCertificate=true;");
             }
         }
 

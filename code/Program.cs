@@ -9,6 +9,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.Configuration = "127.0.0.1:6379,allowAdmin=true";
     options.InstanceName = "dev-redis:";
 });
+builder.Services.AddHybridCache();
 
 var app = builder.Build();
 
